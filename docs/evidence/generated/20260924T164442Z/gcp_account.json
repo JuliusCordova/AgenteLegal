@@ -1,0 +1,6 @@
+{
+  "command": "gcloud config get-value account",
+  "returncode": 0,
+  "stdout": "julio.cordova@gmail.com\n",
+  "stderr": "Your active configuration is: [cloudshell-32300]\n"
+}
