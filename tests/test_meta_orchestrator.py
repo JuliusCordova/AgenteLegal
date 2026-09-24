@@ -46,3 +46,8 @@ def test_abstains_when_no_capability_exists():
     result = build_meta().handle("Cuál es el clima de mañana")
     assert result.status == "unsupported"
     assert result.consulted_domains == []
+
+
+def test_routes_contractual_project_risk_to_both_domains():
+    result = build_meta().handle("Resume el avance del proyecto y su riesgo contractual")
+    assert result.consulted_domains == ["legal", "portfolio"]
