@@ -1,72 +1,53 @@
-# Sprint 3 — Grounded Runtime Contract
+# Sprint 3 — Enterprise Meta-Orchestrator + Grounded Domain Contracts
 
 ## Objective
-
-Connect the proven retrieval foundation to a testable FastAPI runtime contract before building the React experience.
+Turn the existing Legal grounded runtime into the first domain behind a reusable enterprise conversational gateway, and establish Portfolio as the second demo domain.
 
 ## Scope
-
-1. Reconcile the cross-industry product boundary with the existing GraphRAG/multi-agent experiment.
-2. Expose a stable FastAPI contract:
-   - GET /health
-   - GET /api/v1/documents
-   - POST /api/v1/query
-   - POST /api/v1/compare
-3. Connect query/compare requests to grounded retrieval and agent behavior.
-4. Return explicit evidence objects.
-5. Return an explicit no-evidence/abstention state.
-6. Keep the browser/model boundary server-side: React will never call Gemini directly.
-7. Preserve GraphRAG and multi-agent as experiments measured against simpler baselines.
-8. Generate tests and Cloud Shell evidence before merge.
-
-## API response principles
-
-A grounded response must expose:
-- answer;
-- status;
-- evidence[];
-- document identity;
-- section/chunk identity where available;
-- retrieval/provenance metadata required for inspection.
-
-No-evidence must be a first-class response state, not a fabricated answer.
+1. Unified FastAPI conversational entry.
+2. Enterprise Meta-Orchestrator using Google ADK/Gemini.
+3. Capability Registry with Legal and Portfolio domain contracts.
+4. Preserve existing Legal query/compare and GraphRAG runtime behind Legal Domain Orchestrator.
+5. Add a minimal evidence-backed Portfolio demo adapter/orchestrator.
+6. Support single-domain routing and one Legal + Portfolio cross-domain scenario.
+7. Return consulted domains, routing events and evidence/provenance.
+8. Safe abstention for unsupported capabilities.
+9. Keep all components in-process in one Cloud Run runtime.
+10. Produce deterministic tests and Cloud Shell evidence before merge.
 
 ## Gate 3A
+> Can the unified backend route a request to the correct domain and preserve inspectable evidence?
 
-> Can FastAPI execute the legal flow end-to-end and return inspectable evidence or safe abstention without a UI?
+## Gate 3B
+> Can a cross-domain executive question coordinate Legal + Portfolio and return one response without losing provenance?
 
 ## Required evidence
-
-- unit tests;
-- API contract tests;
-- retrieval smoke;
-- known grounded query;
-- known unsupported query;
-- comparison query;
+- unit and API contract tests;
+- Legal routing test;
+- Portfolio routing test;
+- cross-domain routing test;
+- unknown-capability abstention;
+- Legal grounded/no-evidence tests;
 - compile;
 - Cloud Shell GCP checks.
 
 ## Deferred
-
-- React implementation;
-- visual styling;
-- enterprise authentication;
-- OCR;
-- managed vector/graph infrastructure;
-- network-separated agents;
-- client-specific integrations.
+- distributed A2A;
+- separate Cloud Run services per domain;
+- enterprise IAM/ABAC;
+- write/approval actions;
+- production portfolio integrations;
+- React visual implementation until backend orchestration contract is stable.
 
 ## Exit criteria
+One entry point demonstrates:
 
-Sprint is complete when the API can demonstrate:
-Question -> retrieval -> grounded reasoning -> answer + evidence
-
-and:
-Unsupported question -> explicit abstention
+Question → capability discovery → domain orchestration → evidence-backed response
 
 and:
-Comparison -> evidence from each compared document.
 
-## Implementation checkpoint
+Cross-domain question → Legal + Portfolio → consolidated response + domain provenance
 
-The FastAPI contract is now wired to persisted GraphRAG artifacts. Runtime loads the compact index from GCS when LEGAL_GCS_BUCKET is configured, otherwise from data/processed for local development. Query embeddings use Vertex AI/Gemini through the existing GeminiEmbedder. Generation/synthesis remains the next increment; current answers deliberately expose retrieved evidence rather than inventing synthesis.
+and:
+
+Unsupported question → explicit abstention.
