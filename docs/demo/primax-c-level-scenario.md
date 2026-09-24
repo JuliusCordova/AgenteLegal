@@ -1,4 +1,4 @@
-# Primax C-Level FAST DEMO — Executive Scenario
+# Enterprise C-Level FAST DEMO — Executive Scenario
 
 > All project and contract data in this scenario is synthetic and exists only to demonstrate the orchestration pattern.
 
