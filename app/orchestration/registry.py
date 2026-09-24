@@ -15,7 +15,7 @@ DEFAULT_CAPABILITIES = (
     Capability(
         domain="legal",
         description="Contratos, cláusulas, obligaciones, normativa y riesgos legales.",
-        keywords=("contrato", "cláusula", "clausula", "legal", "norma", "confidencial", "obligación", "obligacion"),
+        keywords=("contrato", "contractual", "cláusula", "clausula", "legal", "norma", "confidencial", "obligación", "obligacion"),
     ),
     Capability(
         domain="portfolio",
