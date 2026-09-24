@@ -30,6 +30,9 @@ def main() -> None:
         'unit_tests': run(['pytest', '-q']),
         'compile': run(['python', '-m', 'compileall', 'app', 'tests', 'scripts']),
         'retrieval_smoke': run(['pytest', '-q', 'tests/test_retrieval.py']),
+        'meta_orchestrator': run(['pytest', '-q', 'tests/test_meta_orchestrator.py']),
+        'portfolio_grounding': run(['pytest', '-q', 'tests/test_portfolio_domain.py']),
+        'cross_domain_demo': run(['pytest', '-q', 'tests/test_cross_domain_demo.py']),
         'gcp_project': run(['gcloud', 'config', 'get-value', 'project']),
         'gcp_account': run(['gcloud', 'config', 'get-value', 'account']),
     }
@@ -37,6 +40,7 @@ def main() -> None:
     bucket = os.getenv('LEGAL_GCS_BUCKET', '')
     if bucket:
         checks['gcs_bucket'] = run(['gcloud', 'storage', 'buckets', 'describe', f'gs://{bucket}'])
+        checks['gcs_index_metadata'] = run(['gcloud', 'storage', 'ls', f'gs://{bucket}/index/metadata.json'])
 
     git_sha = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     git_branch = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=ROOT, text=True).strip()

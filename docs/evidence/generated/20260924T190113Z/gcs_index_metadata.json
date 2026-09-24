@@ -1,0 +1,6 @@
+{
+  "command": "gcloud storage ls gs://proyectopersonal-480420-agente-legal/index/metadata.json",
+  "returncode": 0,
+  "stdout": "gs://proyectopersonal-480420-agente-legal/index/metadata.json\n",
+  "stderr": ""
+}

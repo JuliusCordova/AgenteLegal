@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "20260924T190113Z",
+  "git_sha": "b960ce7c73270c96f410ffdd056ccf41a4422e48",
+  "git_branch": "feature/sprint-3-grounded-api",
+  "gcp_project_expected": "proyectopersonal-480420",
+  "gcp_region": "us-central1",
+  "gcs_bucket": "proyectopersonal-480420-agente-legal",
+  "python": "3.12.3",
+  "checks": {
+    "unit_tests": true,
+    "compile": true,
+    "retrieval_smoke": true,
+    "meta_orchestrator": true,
+    "portfolio_grounding": true,
+    "cross_domain_demo": true,
+    "gcp_project": true,
+    "gcp_account": true,
+    "gcs_bucket": true,
+    "gcs_index_metadata": true
+  }
+}

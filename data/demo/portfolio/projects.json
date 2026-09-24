@@ -1,0 +1,54 @@
+[
+  {
+    "project_id": "DEMO-PROJ-001",
+    "name": "Modernización de Abastecimiento",
+    "status": "En ejecución",
+    "progress_pct": 68,
+    "executive_health": "Atención",
+    "next_milestone": "Validación integral del piloto",
+    "milestone_date": "2026-10-15",
+    "risks": [
+      "Dependencia de aprobación contractual para ampliar el piloto",
+      "Integración pendiente con una fuente operativa"
+    ],
+    "dependencies": [
+      "Contrato DEMO-LEGAL-001",
+      "Equipo de Integraciones"
+    ],
+    "source": "Synthetic Enterprise executive demo dataset"
+  },
+  {
+    "project_id": "DEMO-PROJ-002",
+    "name": "Optimización de Operaciones",
+    "status": "En ejecución",
+    "progress_pct": 82,
+    "executive_health": "En curso",
+    "next_milestone": "Cierre de pruebas de negocio",
+    "milestone_date": "2026-10-05",
+    "risks": [
+      "Disponibilidad limitada de usuarios clave para UAT"
+    ],
+    "dependencies": [
+      "Equipo de Operaciones"
+    ],
+    "source": "Synthetic Enterprise executive demo dataset"
+  },
+  {
+    "project_id": "DEMO-PROJ-003",
+    "name": "Analítica Comercial",
+    "status": "Planificación",
+    "progress_pct": 25,
+    "executive_health": "Atención",
+    "next_milestone": "Aprobación del alcance MVP",
+    "milestone_date": "2026-10-20",
+    "risks": [
+      "Alcance de datos aún en definición",
+      "Dependencia de priorización del portafolio"
+    ],
+    "dependencies": [
+      "Gobierno de Datos",
+      "PMO"
+    ],
+    "source": "Synthetic Enterprise executive demo dataset"
+  }
+]
