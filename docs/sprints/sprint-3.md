@@ -66,3 +66,7 @@ Unsupported question -> explicit abstention
 
 and:
 Comparison -> evidence from each compared document.
+
+## Implementation checkpoint
+
+The FastAPI contract is now wired to persisted GraphRAG artifacts. Runtime loads the compact index from GCS when LEGAL_GCS_BUCKET is configured, otherwise from data/processed for local development. Query embeddings use Vertex AI/Gemini through the existing GeminiEmbedder. Generation/synthesis remains the next increment; current answers deliberately expose retrieved evidence rather than inventing synthesis.
