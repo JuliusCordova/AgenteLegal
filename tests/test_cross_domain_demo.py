@@ -14,11 +14,11 @@ class EvidenceDomain:
             return DomainResult(
                 domain="portfolio",
                 status="grounded",
-                summary="PRJ-001 está en ejecución con 68% de avance y depende de aprobación contractual.",
+                summary="DEMO-PROJ-001 está en ejecución con 68% de avance y depende de aprobación contractual.",
                 evidence=[
                     DomainEvidence(
                         domain="portfolio",
-                        source_id="PRJ-001",
+                        source_id="DEMO-PROJ-001",
                         source_name="Modernización de Abastecimiento",
                         excerpt="68% de avance; dependencia: Contrato DEMO-LEGAL-001.",
                         score=1.0,
@@ -36,7 +36,7 @@ class EvidenceDomain:
                     source_name="DEMO-LEGAL-001",
                     excerpt="La ampliación a una siguiente fase requiere aprobación escrita.",
                     score=0.95,
-                    metadata={"related_project": "PRJ-001"},
+                    metadata={"related_project": "DEMO-PROJ-001"},
                 )
             ],
             requires_human_review=True,
@@ -53,8 +53,8 @@ def test_executive_cross_domain_scenario_preserves_provenance():
     )
 
     result = meta.handle(
-        "Cuál es el avance del proyecto PRJ-001 y qué riesgos tiene su contrato",
-        {"project_id": "PRJ-001"},
+        "Cuál es el avance del proyecto DEMO-PROJ-001 y qué riesgos tiene su contrato",
+        {"project_id": "DEMO-PROJ-001"},
     )
 
     assert result.status == "grounded"
