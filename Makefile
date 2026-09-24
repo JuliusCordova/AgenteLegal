@@ -1,4 +1,4 @@
-.PHONY: install test lint dev docker-build
+.PHONY: install test lint dev docker-build build-index upload-index
 
 install:
 	python -m pip install -r requirements.txt
@@ -14,3 +14,9 @@ dev:
 
 docker-build:
 	docker build -t agente-legal:local .
+
+build-index:
+	PYTHONPATH=. python scripts/build_retrieval_index.py
+
+upload-index:
+	PYTHONPATH=. python scripts/upload_retrieval_artifacts.py
