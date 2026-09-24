@@ -1,6 +1,6 @@
 [
   {
-    "project_id": "PRJ-001",
+    "project_id": "DEMO-PROJ-001",
     "name": "Modernización de Abastecimiento",
     "status": "En ejecución",
     "progress_pct": 68,
@@ -18,7 +18,7 @@
     "source": "Synthetic Enterprise executive demo dataset"
   },
   {
-    "project_id": "PRJ-002",
+    "project_id": "DEMO-PROJ-002",
     "name": "Optimización de Operaciones",
     "status": "En ejecución",
     "progress_pct": 82,
@@ -34,7 +34,7 @@
     "source": "Synthetic Enterprise executive demo dataset"
   },
   {
-    "project_id": "PRJ-003",
+    "project_id": "DEMO-PROJ-003",
     "name": "Analítica Comercial",
     "status": "Planificación",
     "progress_pct": 25,
