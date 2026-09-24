@@ -2,3 +2,5 @@ fastapi
 uvicorn[standard]
 pytest
 httpx
+google-genai
+google-cloud-storage
