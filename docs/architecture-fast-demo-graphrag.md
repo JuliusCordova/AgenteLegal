@@ -1,7 +1,7 @@
 # FAST DEMO — Enterprise Meta-Orchestrator + Domain Orchestrators
 
 ## Executive objective
-Demonstrate one conversational enterprise entry point that understands a user's need and coordinates the appropriate agent domains. Legal is the first evidence-backed domain; Portfolio Management is the second reference domain for the Primax C-Level demo.
+Demonstrate one conversational enterprise entry point that understands a user's need and coordinates the appropriate agent domains. Legal is the first evidence-backed domain; Portfolio Management is the second reference domain for the Enterprise C-Level demo.
 
 ~~~mermaid
 flowchart TB
