@@ -32,17 +32,3 @@ class LegalDomainOrchestrator:
             requires_human_review=True,
         )
 
-
-@dataclass
-class PortfolioDomainOrchestrator:
-    domain: str = "portfolio"
-
-    def handle(self, question: str, context: dict[str, Any]) -> DomainResult:
-        # FAST DEMO boundary: replace with evidence-backed portfolio adapter next.
-        return DomainResult(
-            domain=self.domain,
-            status="not_configured",
-            summary="La capacidad de Gestión de Portafolio fue identificada, pero su fuente de datos demo aún no está configurada.",
-            evidence=[],
-            requires_human_review=False,
-        )
