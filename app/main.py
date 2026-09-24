@@ -1,10 +1,13 @@
+from pathlib import Path
+
 from fastapi import Depends, FastAPI
 
 from app.api_models import CompareRequest, EnterpriseQueryRequest, EnterpriseQueryResponse, GroundedResponse, QueryRequest
 from app.config import settings
 from app.runtime import GroundedLegalRuntime
 from app.runtime_factory import build_runtime
-from app.orchestration.domains import LegalDomainOrchestrator, PortfolioDomainOrchestrator
+from app.orchestration.domains import LegalDomainOrchestrator
+from app.orchestration.portfolio import GroundedPortfolioOrchestrator, PortfolioDemoRepository
 from app.orchestration.meta import EnterpriseMetaOrchestrator
 from app.orchestration.registry import CapabilityRegistry
 
@@ -73,7 +76,7 @@ def get_meta_orchestrator() -> EnterpriseMetaOrchestrator:
         registry=CapabilityRegistry(),
         domains={
             "legal": LegalDomainOrchestrator(legal_runtime),
-            "portfolio": PortfolioDomainOrchestrator(),
+            "portfolio": GroundedPortfolioOrchestrator(PortfolioDemoRepository(Path("data/demo/portfolio/projects.json"))),
         },
     )
 
