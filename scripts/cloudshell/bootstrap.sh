@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 set -euo pipefail
 
 PROJECT_ID="${LEGAL_GCP_PROJECT:-proyectopersonal-480420}"
