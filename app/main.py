@@ -3,6 +3,7 @@ from fastapi import Depends, FastAPI
 from app.api_models import CompareRequest, GroundedResponse, QueryRequest
 from app.config import settings
 from app.runtime import GroundedLegalRuntime
+from app.runtime_factory import build_runtime
 
 app = FastAPI(
     title="AgenteLegal",
@@ -12,12 +13,11 @@ app = FastAPI(
 
 
 def get_runtime() -> GroundedLegalRuntime:
-    """Runtime dependency.
+    """Return the cached production retrieval runtime.
 
-    The production GraphRAG/ADK wiring is attached behind this boundary.
-    Tests override it with deterministic retrieval.
+    Tests override this dependency with deterministic retrieval.
     """
-    raise RuntimeError("Grounded runtime is not configured yet")
+    return build_runtime()
 
 
 @app.get("/health")
