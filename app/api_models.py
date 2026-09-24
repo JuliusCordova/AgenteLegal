@@ -32,3 +32,16 @@ class GroundedResponse(BaseModel):
     answer: str
     evidence: list[Evidence] = Field(default_factory=list)
     requires_human_review: bool = True
+
+
+class EnterpriseQueryRequest(BaseModel):
+    question: str = Field(min_length=1)
+    context: dict[str, Any] = Field(default_factory=dict)
+
+
+class EnterpriseQueryResponse(BaseModel):
+    status: str
+    answer: str
+    consulted_domains: list[str] = Field(default_factory=list)
+    routing_events: list[str] = Field(default_factory=list)
+    domain_results: list[dict[str, Any]] = Field(default_factory=list)
