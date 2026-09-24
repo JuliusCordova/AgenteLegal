@@ -8,7 +8,7 @@ Business users should not need to know which agent, application or domain owns t
 ### Desired Outcome
 Provide one conversational entry point — **“¿En qué te ayudo?”** — that understands intent, discovers the relevant enterprise capability and delegates to one or more domain orchestrators while preserving each domain's evidence, rules and human-review boundaries.
 
-AgenteLegal becomes the **first domain implementation**, not the enterprise entry point itself. Portfolio Management is the second reference domain for the Primax executive demo.
+AgenteLegal becomes the **first domain implementation**, not the enterprise entry point itself. Portfolio Management is the second reference domain for the Enterprise executive demo.
 
 ### North Star
 Reduce the path from a business question to a coordinated, evidence-backed answer across enterprise agent domains.
@@ -128,7 +128,7 @@ Then the UI can show states such as understanding request, identifying domain, c
 - BR-006: final approvals remain human.
 - BR-007: GraphRAG remains an experimental Legal-domain capability measured against vector RAG.
 - BR-008: all FAST DEMO orchestrators/agents may run in-process in one Cloud Run service.
-- BR-009: Primax is the executive demo context, not a hardcoded dependency of the reusable core.
+- BR-009: Enterprise is the executive demo context, not a hardcoded dependency of the reusable core.
 
 ## 9. Orchestration Model
 
