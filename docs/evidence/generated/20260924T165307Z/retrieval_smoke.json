@@ -1,0 +1,6 @@
+{
+  "command": "pytest -q tests/test_retrieval.py",
+  "returncode": 0,
+  "stdout": ".                                                                        [100%]\n1 passed in 2.53s\n",
+  "stderr": ""
+}

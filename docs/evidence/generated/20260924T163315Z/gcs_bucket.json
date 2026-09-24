@@ -1,0 +1,6 @@
+{
+  "command": "gcloud storage buckets describe gs://proyectopersonal-480420-agente-legal",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "ERROR: (gcloud.storage.buckets.describe) gs://proyectopersonal-480420-agente-legal not found: 404.\n"
+}

@@ -1,0 +1,6 @@
+{
+  "command": "python -m compileall app tests scripts",
+  "returncode": 0,
+  "stdout": "Listing 'app'...\nListing 'app/agent'...\nListing 'app/retrieval'...\nListing 'app/tools'...\nListing 'tests'...\nListing 'scripts'...\nListing 'scripts/cloudshell'...\n",
+  "stderr": ""
+}

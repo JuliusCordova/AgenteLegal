@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "20260924T165307Z",
+  "git_sha": "aa5f189a3f0acc907cfe49118172fcea3bfd0d40",
+  "git_branch": "feature/sprint-2-dev-loop",
+  "gcp_project_expected": "proyectopersonal-480420",
+  "gcp_region": "us-central1",
+  "gcs_bucket": "proyectopersonal-480420-agente-legal",
+  "python": "3.12.3",
+  "checks": {
+    "unit_tests": true,
+    "compile": true,
+    "retrieval_smoke": true,
+    "gcp_project": true,
+    "gcp_account": true,
+    "gcs_bucket": true
+  }
+}
