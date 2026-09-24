@@ -26,8 +26,12 @@ Repository, FastAPI runtime skeleton, GCP baseline and test harness.
 ### Gate 2
 > Can cloud-affecting changes be validated against real GCP and leave reproducible evidence?
 
-## Sprint 3 — Grounded Runtime Contract
-- FastAPI API contract
+## Sprint 3 — Enterprise Meta-Orchestrator + Grounded Domain Contracts
+- unified FastAPI conversational entry contract
+- Enterprise Meta-Orchestrator
+- Capability Registry
+- Legal Domain Orchestrator
+- Portfolio Domain Orchestrator demo boundary
 - Google ADK / Gemini runtime
 - retrieval tool contract
 - grounded response contract
@@ -38,10 +42,12 @@ Repository, FastAPI runtime skeleton, GCP baseline and test harness.
 - single/simple behavior retained as comparison baseline
 
 ### Gate 3
-> Can the backend answer and compare without inventing evidence, and is extra agentic complexity justified by measurements?
+> Can one entry point route Legal and Portfolio requests, coordinate a cross-domain request, preserve evidence provenance and abstain safely without requiring distributed infrastructure?
 
-## Sprint 4 — React Legal Workbench
-- React frontend
+## Sprint 4 — React Enterprise Agent Workbench
+- React frontend with “¿En qué te ayudo?” entry
+- visible routing/progress states
+- domain provenance
 - FastAPI integration
 - Nielsen usability baseline
 - loading/success/no-evidence/error/retry states
