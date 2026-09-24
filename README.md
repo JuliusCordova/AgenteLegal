@@ -63,3 +63,27 @@ See:
 - `docs/architecture.md`
 - `docs/implementation-plan.md`
 - `docs/sprints/sprint-0.md`
+
+
+## Sprint 1 — GraphRAG Retrieval
+
+FAST DEMO now intentionally includes:
+- GraphRAG over contracts + Peruvian legal norms;
+- multi-agent topology with in-process specialists;
+- Cloud Storage as durable corpus/index store;
+- in-memory vector retrieval + graph expansion;
+- benchmark dataset to compare baseline vector RAG vs GraphRAG.
+
+Key documents:
+- `docs/sprints/sprint-1.md`
+- `docs/architecture-fast-demo-graphrag.md`
+- `docs/multi-agent-contracts.md`
+
+Commands:
+
+```bash
+make build-index
+make upload-index
+```
+
+The FAST DEMO does not use a managed vector or graph database.
