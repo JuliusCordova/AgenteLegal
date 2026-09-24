@@ -1,14 +1,17 @@
 from fastapi import Depends, FastAPI
 
-from app.api_models import CompareRequest, GroundedResponse, QueryRequest
+from app.api_models import CompareRequest, EnterpriseQueryRequest, EnterpriseQueryResponse, GroundedResponse, QueryRequest
 from app.config import settings
 from app.runtime import GroundedLegalRuntime
 from app.runtime_factory import build_runtime
+from app.orchestration.domains import LegalDomainOrchestrator, PortfolioDomainOrchestrator
+from app.orchestration.meta import EnterpriseMetaOrchestrator
+from app.orchestration.registry import CapabilityRegistry
 
 app = FastAPI(
     title="AgenteLegal",
     version="0.2.0",
-    description="Cross-industry FAST DEMO for evidence-backed legal intelligence.",
+    description="FAST DEMO enterprise agent gateway with Legal and Portfolio domains.",
 )
 
 
@@ -61,4 +64,35 @@ def compare_legal(
         question=request.question,
         document_ids=request.document_ids,
         top_k=request.top_k,
+    )
+
+
+def get_meta_orchestrator() -> EnterpriseMetaOrchestrator:
+    legal_runtime = build_runtime()
+    return EnterpriseMetaOrchestrator(
+        registry=CapabilityRegistry(),
+        domains={
+            "legal": LegalDomainOrchestrator(legal_runtime),
+            "portfolio": PortfolioDomainOrchestrator(),
+        },
+    )
+
+
+@app.get("/api/v1/capabilities")
+def capabilities() -> list[dict[str, str]]:
+    return CapabilityRegistry().catalog()
+
+
+@app.post("/api/v1/ask", response_model=EnterpriseQueryResponse)
+def ask_enterprise(
+    request: EnterpriseQueryRequest,
+    orchestrator: EnterpriseMetaOrchestrator = Depends(get_meta_orchestrator),
+) -> EnterpriseQueryResponse:
+    result = orchestrator.handle(request.question, request.context)
+    return EnterpriseQueryResponse(
+        status=result.status,
+        answer=result.answer,
+        consulted_domains=result.consulted_domains,
+        routing_events=result.routing_events,
+        domain_results=[item.model_dump() for item in result.domain_results],
     )
