@@ -26,8 +26,6 @@ Reduce time from legal question to evidence-backed answer.
 - autonomous legal decisions;
 - autonomous contract execution;
 - privileged write actions;
-- complex multi-agent topology;
-- GraphRAG by default;
 - production-grade private networking;
 - enterprise-wide document ingestion.
 
@@ -104,7 +102,10 @@ And final approval remains human.
 - BR-001: evidence-backed answers are preferred over unsupported synthesis.
 - BR-002: no source means no authoritative legal conclusion.
 - BR-003: final legal approval remains human.
-- BR-004: GraphRAG is introduced only if benchmark evidence shows material improvement over standard/hybrid RAG.
+- BR-004: FAST DEMO intentionally uses GraphRAG to connect contracts, clauses, topics and Peruvian legal norms.
+- BR-005: FAST DEMO intentionally uses a small multi-agent topology with explicit specialist responsibilities.
+- BR-006: GraphRAG artifacts are persisted in Cloud Storage to minimize infrastructure cost.
+- BR-007: The graph must preserve provenance back to source documents and legal-norm references.
 
 ## 9. Logical Data Model
 
@@ -151,4 +152,5 @@ FAST DEMO is successful when:
 - citations are inspectable;
 - unsupported questions are rejected/qualified correctly;
 - clause comparison works on representative examples;
-- architecture remains single-agent unless evidence proves otherwise.
+- multi-agent routing is observable and each specialist has explicit responsibility;
+- GraphRAG retrieves both semantic similarity and connected legal relationships.
