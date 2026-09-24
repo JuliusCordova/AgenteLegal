@@ -15,7 +15,7 @@
       "Contrato DEMO-LEGAL-001",
       "Equipo de Integraciones"
     ],
-    "source": "Synthetic Primax executive demo dataset"
+    "source": "Synthetic Enterprise executive demo dataset"
   },
   {
     "project_id": "PRJ-002",
@@ -31,7 +31,7 @@
     "dependencies": [
       "Equipo de Operaciones"
     ],
-    "source": "Synthetic Primax executive demo dataset"
+    "source": "Synthetic Enterprise executive demo dataset"
   },
   {
     "project_id": "PRJ-003",
@@ -49,6 +49,6 @@
       "Gobierno de Datos",
       "PMO"
     ],
-    "source": "Synthetic Primax executive demo dataset"
+    "source": "Synthetic Enterprise executive demo dataset"
   }
 ]
