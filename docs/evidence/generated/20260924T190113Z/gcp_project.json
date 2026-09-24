@@ -1,0 +1,6 @@
+{
+  "command": "gcloud config get-value project",
+  "returncode": 0,
+  "stdout": "proyectopersonal-480420\n",
+  "stderr": "Your active configuration is: [cloudshell-12801]\n"
+}

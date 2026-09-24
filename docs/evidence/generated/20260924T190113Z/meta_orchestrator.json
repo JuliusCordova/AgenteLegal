@@ -1,0 +1,6 @@
+{
+  "command": "pytest -q tests/test_meta_orchestrator.py",
+  "returncode": 0,
+  "stdout": ".....                                                                    [100%]\n5 passed in 0.13s\n",
+  "stderr": ""
+}

@@ -1,0 +1,6 @@
+{
+  "command": "gcloud storage buckets describe gs://proyectopersonal-480420-agente-legal",
+  "returncode": 0,
+  "stdout": "creation_time: 2026-09-24T16:36:18+0000\ndefault_storage_class: STANDARD\ngeneration: 1790267778338355010\nlocation: US-CENTRAL1\nlocation_type: region\nmetageneration: 1\nname: proyectopersonal-480420-agente-legal\npublic_access_prevention: inherited\nsoft_delete_policy:\n  effectiveTime: '2026-09-24T16:36:18.422000+00:00'\n  retentionDurationSeconds: '604800'\nstorage_url: gs://proyectopersonal-480420-agente-legal/\nuniform_bucket_level_access: true\nupdate_time: 2026-09-24T16:36:18+0000\n",
+  "stderr": ""
+}

@@ -1,0 +1,6 @@
+{
+  "command": "pytest -q tests/test_cross_domain_demo.py",
+  "returncode": 0,
+  "stdout": ".                                                                        [100%]\n1 passed in 0.12s\n",
+  "stderr": ""
+}
